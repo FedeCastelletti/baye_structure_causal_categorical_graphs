@@ -1,20 +1,22 @@
-## Generate DAG and data
-
-q = 10
-n = 1000
+## Required packages and functions
 
 library(pcalg)
 library(plyr)
 library(gtools)
 library(devtools)
 
-install_github("mldv/bnlearn")
-
+install_github("mldv/bnlearn@4.8.3-1")
 library(bnlearn)
 
 source("gen_dag_data.R")
 source("mcmc_dag_theta.R")
 source("gamma_causal.R")
+
+
+## Generate random DAG and data for fixed q and n
+
+q = 10
+n = 1000
 
 ## Simulate a DAG (dag) and generate a categorical dataset Y
 
